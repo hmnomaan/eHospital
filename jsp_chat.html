@@ -1,0 +1,246 @@
+<html>
+
+<head>
+<title>Chat Application using JSP and Java Servlets</title>
+<meta name="Author" content="Sukhwinder Singh">
+<meta name="Keywords" content="chat, Chat, jsp, JSP, chat application, sukhwinder singh, application, session, servlet, servlets, java, source, code">
+<meta name="Description" content="This chat application is written using jsp and java servlets. It is provided as a zip file and can be deployed to any container which supports java servlet 2.3 and JSP 1.2 or greater.">
+<link rel="stylesheet" type="text/css" href="images/style.css">
+</head>
+
+<body>
+<a href="http://www.web-tech-india.com">Web Development</a> | <a href="http://www.indiawebtech.com">Web Designing</a>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <h2>Chat Application using JSP and Java Servlets
+      </h2>
+      <h1 style="font-size:13px;font-weight:bold;text-align:center"><i>By: <a href="http://www.web-tech-india.com/freelance/web_developer_india/freelance_web_developer_india.php" title="Sukhwinder is a web developer by profession. Contact him for any freelancing web development work.">Sukhwinder Singh</a></i>
+      </h1>
+      <p>&nbsp;</p>    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><a name="top"></a>
+      <ul>
+        <li><a href="#desc">Description</a></li>
+        <li><a href="#req">Requirements</a></li>
+        <li><a href="#note">Note</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#conf">Configuration</a></li>
+        <li><a href="#contact">Contact Information</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <h3><a name="desc">Description</a></h3>
+      <p>This is a web based chat application and uses only JSP and Servlets. It doesn't use applets,
+      activeX controls or database. It isn't a commercial application but a
+      freeware, which shows
+      how JSP and Servlets can be used. If you
+      know Java and JSP you can also <a href="http://www.web-tech-india.com/software/download.php?fileName=chatsrc.zip">download</a> source code
+      of Java Classes and try to extend this application yourself.</p>
+			<p><i>Note: If you are looking for socket based chat application in Java that can be downloaded from
+            <a href="http://www.web-tech-india.com/software/download.php?fileName=applet.zip">here.</a></i>
+      <p>This chat application can be used for group discussion. You
+      can download and use it in anyway you like but, please, don't remove the author information from any
+      file. Here is a screen shot of a chat session:</p>
+      <p>&nbsp;</p>
+      <p align="center"><a href="images/chat.jpg" target="_blank"><img border="1" src="images/chat_small.jpg" width="300" height="172"></a></p>
+      <p>Here are some of the things this chat application supports:</p>
+      <ul>
+        <li>It supports rooms. Users can create their own rooms.<p align="center">
+        
+        <a href="images/listroom.jpg" target="_blank"><img border="1" src="images/listroom_small.jpg" width="300" height="163"></a><p>
+        
+        
+        
+        </li>
+        <li>It allows users to find other logged in users.
+          <p align="center"><img border="0" src="images/find.jpg" width="300" height="241"><br>
+          <br>
+        </li>
+        <li>It informs users in particular room when someone joins, leaves the room or logs out.
+          <p align="center"><a href="images/chat2.jpg" target="_blank"><img border="1" src="images/chat2_small.jpg" width="300" height="189"></a><br>
+          <br>
+        </li>
+        <li>It allows users to store some personal information which can be viewed by others.
+          <p align="center"><a href="images/edit.jpg"><img border="0" src="images/edit.jpg" width="300" height="241"></a><br>
+          <br>
+        </li>
+      </ul>
+          <p align="left"><a href="#top">Back to Top</a>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <h3><a name="req">Requirements</a></h3>
+      <p>This application needs container with support for Servlet 2.3 and JSP 1.2 specification because it uses
+      listeners which are available only in Servlet 2.3 specifications. Tomcat 4/5/5.5 and Resin 2.1 or
+      greater, both support Servlet 2.3 spec.
+      <p>It may work on Servlet 2.2 container but problem you'll face is, if a user doesn't log out
+      manually then his object won't be removed from application ( ServletContext) object. When his session
+      expires his session will be destroyed automatically but information stored in
+      application object won't be destroyed and will remain there.
+      <p><a href="#top">Back to Top</a></td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <h3><a name="note">Note</a></h3>
+      <p>It is not fully tested and bug free application as it has not been
+      tested on a production server. But this application has been available for
+      download since April, 2003 and no one has yet reported any problem with
+      it.<p>If you find any bug then please send author an <a href="mailto:ssruprai@hotmail.com">email</a>. If
+      he had time he'll try to fix it. But please don't ask how to configure it
+      in your Servlet container as it works out of the box in Tomcat and Resin. Developers&nbsp;can also
+      <a href="http://www.web-tech-india.com/software/download.php?fileName=chatsrc.zip">download</a> source code of Java classes (which can be easily extended) and try to fix bugs or extend and improve this application.
+      After fixing bugs or extending this application you can send author the modified files so that
+      he can update the
+      application in future.<p>Author wrote this application because he wanted to know how web based chat applications work and to improve
+      his knowledge of JSP and Servlets. He was not able to find some complete example of it on web.
+      He read Professional Java Server Programming from wrox and it provided him
+      a starting point. As author just wanted to show how chat applications
+      work, there is minimal validation done on
+      user input. Validation is done only when it may affect the application functionality as it is
+      just a demonstration of author's work. For example, an email
+      address user provides, is not validated. But validation can be easily added.
+      <p>This application makes heavy use of ServletContext to store every object as no database is
+      used. It is just plug and play kind of thing. So memory requirements may be high. Memory
+      requirement will depend upon the number of users currently logged in.
+      <h4 class="error">It won't, but if this applicationh crashes or harms your computer in any way,
+      author won't
+      be responsible for it.</h4>
+			<p><a href="#top">Back to Top</a></td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+     
+      <h3><a name="download">Download</a></h3>
+      <p>Before downloading this application, you must read <a href="#note">note above</a>. Then Download this
+      <a href="http://www.web-tech-india.com/software/download.php?fileName=chat.zip">zip</a> file (261 kb).
+			After downloading this <a href="http://www.web-tech-india.com/software/download.php?fileName=chat.zip">zip</a>
+      file extract its contents somewhere. In extracted files there will be a file named chat.war. Copy
+      this chat.war to your Servlet/JSP container's webapps directory.
+      For Tomcat 4.1 / 5.0 / 5.5 and Resin 2.1 there is a sub-directory named <i>webapps</i>. Copy this chat.war
+      file to this webapps directory and start your container or server. Then you can
+      access this application by using a URL like <a href="http://localhost:8080">http://localhost:8080/chat</a>/.
+      Replace localhost with name of your server. If your container/server is using some other port, then change port number from 8080 to that port.
+      <p>Developers&nbsp; can also <a href="http://www.web-tech-india.com/software/download.php?fileName=chatsrc.zip">download</a> source code of Java classes
+      <p><a href="#top">Back to Top</a></td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <h3><a name="conf">Configuration</a></h3>
+      <p>You can configure this application by changing some parameters is <i> WEB-INF/web.xml</i> file in
+      chat.war. To edit this file before deploying you have to extract contents of this chat.war file. In the files extracted there will be a directory named
+      <i>WEB-INF</i>. In this
+      directory there will be a file named <i>web.xml</i>. In this <i> web.xml</i> file you can change the options
+      given in the table <a href="#options">below</a>. After making the changes you have to recreate the
+      chat.war file
+      again. You can create this war file using any zip utility like JDK's <i>jar</i> or WinZip. After creating
+      the zip file just change its extension from zip to war. There is also a file named <i>chat.properties</i>
+      in <i> WEB-INF</i> directory, which stores the name of chat rooms and their description. At server
+      startup this file is read. If this file is missing then error is displayed in console and
+      application won't work. There are few initialization parameters which can be changed. Comments
+      have been added to this <i> web.xml</i> file about the settings you can change. There are six
+      parameters you can change.
+      <p><a name="options"></a>
+      <div align="center">
+            <center>
+        <table border="1" width="80%" cellspacing="0" cellpadding="4">
+          <tr>
+            <td width="33%" align="center"><b>Parameter Name</b></td>
+            <td width="33%" align="center"><b>Parameter Value</b></td>
+            <td width="34%" align="center"><b>Description</b></td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">chatpropertyfile</td>
+              <td width="33%" valign="top">Any file name without any path. This file must be stored
+                inside WEB-INF subdirectory of war file.</td>
+              <td width="34%" valign="top">You can change the name of the file which is used to
+                store room names and description. <b>Author recommends that you don't change this
+                parameter.&nbsp;</b></td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">saveRooms</td>
+              <td width="33%" valign="top">true / false</td>
+              <td width="34%" valign="top">The value of saveRooms can be set to true or false. If
+                true then all new rooms added by users will be saved in chat.properties files.
+                Default is false.</td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">adminEmail</td>
+              <td width="33%" valign="top">Any valid email address.</td>
+              <td width="34%" valign="top">Provide an e-mail address of the administrator of this
+                application. This email address is displayed when any error occurs in application.
+                On error page this email is displayed for contacting the admin.</td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">sessionTimeout</td>
+              <td width="33%" valign="top">no. of minutes</td>
+              <td width="34%" valign="top">Add time in minutes after which user's session will be
+                expired.<br>
+                If user doesn't make any request after provided minutes he will be automatically
+                logged out and his information will be destroyed.<br>
+                Default is 30 minutes</td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">refreshAfter</td>
+              <td width="33%" valign="top">no. of seconds</td>
+              <td width="34%" valign="top">Time in seconds after which user's browser window will
+                automatically refresh to display<br>
+                new messages.<br>
+                Default is 10 seconds.</td>
+            </tr>
+            <tr>
+              <td width="33%" valign="top">maxNoOfMessages</td>
+              <td width="33%" valign="top">any number</td>
+              <td width="34%" valign="top">Maximum Number of messages that are stored in a list
+                which is used to store all messages<br>
+                in a room. After this limit is reached older messages are removed. Set this to some
+                reasonable value depending upon the no. of active users you expect.<br>
+                Default is 25.</td>
+            </tr>
+          </table>
+        </center>
+      </div>
+      <p>To delete rooms you have to manually edit <i> WEB-INF/chat.properties</i> file in chat.war
+      or if application has been deployed then in the <i>WEB-INF/chat.properties</i> file present in
+      the deployed directory (e.g &lt;server deployment directory&gt;/chat/WEB-INF/chat.properties).</p>
+      <p><a href="#top">Back to Top</a>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="100%">
+      <p>&nbsp;</p>
+      <h3><a name="contact">Contact Information</a></h3>
+      <p><a href="mailto:ssruprai@hotmail.com?subject=Freelancing Work">Contact</a>
+      author for any freelancing web development work like Content Management
+      Systems, E-commerce applications or other web development work. Author can
+      program in many server side programming languages like PHP, ASP, ASP.Net
+      (C# or VB.Net), Jsp/Servlets etc.
+      <p><a href="http://www.web-tech-india.com/freelance/web_developer_cv/web_developer_cv.php">Sukhwinder Singh</a>  (<a href="mailto:ssruprai@hotmail.com">ssruprai@hotmail.com</a>)<br>
+      <br>
+      Mobile: +91-98158-00532
+      <p><a href="#top">Back to Top</a> | <a href="http://www.web-tech-india.com/articles/php/compiling_php_apache/compiling_php_apache.php">Article about compiling PHP</a> | <a href="http://www.web-tech-india.com">Web Development</a> | <a href="http://www.indiawebtech.com">Web Designing</a> </td>
+  </tr>
+</table>
+
+</body>
+</html>
+<!-- #include file="../counter.asp" -->
